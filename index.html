@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="Jewellery.styles.css" asp-append-version="true" />
+ 
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Education Meeting HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="css/owl.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+</head>
+<style>
+    /* 1. Make the parent row a flex container */
+    .row.equal-height {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        /* 2. Make child columns stretch equally */
+        .row.equal-height > .col-lg-7,
+        .row.equal-height > .col-lg-5 {
+            display: flex;
+            flex-direction: column;
+        }
+
+    /* 3. Ensure both containers fill their column height */
+    .form-container,
+    .info-container {
+        flex: 1;
+        background: #f9f9f9;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+
+    .owl-courses-item .down-content p {
+        font-size: 10px; /* Adjust font size */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Elegant, clean font */
+        font-style: italic; /* Optional: makes it look like a quote */
+        color: #333; /* Dark gray for better readability */
+        text-align: inherit; /* Align text neatly */
+        line-height: 1.6; /* Better line spacing for readability */
+        margin-bottom: 12px;
+        /* Optional: limit lines to fit same height boxes */
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5; /* Show only 5 lines of text */
+        -webkit-box-orient: vertical;
+    }
+
+        .owl-courses-item .item img {
+            width: 100%;
+            height: 370px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+    .owl-courses-item .down-content {
+        height: 400px; /* Fixed height for equal spacing */
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .owl-courses-item .down-content h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .owl-courses-item .down-content p {
+            height:209px;
+            text-align: justify; /* ✅ This aligns the text properly */
+            font-size: 14px;
+            line-height: 1.5;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4; /* ✅ Show only 4 lines of text */
+            -webkit-box-orient: vertical;
+        }
+
+    .owl-courses-item ul {
+        padding: 0;
+        margin: 10px 0 0 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+        .owl-courses-item ul li {
+            color: gold;
+            margin: 0 2px;
+        }
+
+    /* Equal height containers */
+    .equal-height {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        .equal-height > [class*='col-'] {
+            display: flex;
+            flex-direction: column;
+        }
+
+    .form-container, .info-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-container {
+        background: white;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    /* Rest of your existing styles */
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    .contact-form textarea {
+        height: 150px;
+    }
+
+    .contact-form .main-button {
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .info-item {
+        margin-bottom: 25px;
+    }
+
+        .info-item h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #2a2a2a;
+        }
+
+        .info-item p {
+            margin: 0;
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+    .social-links {
+        margin-top: 30px;
+    }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #a67c52;
+            font-size: 20px;
+        }
+
+        .social-links h4 {
+            margin-bottom: 15px;
+        }
+
+    .meeting-item {
+        height: 100%;
+    }
+</style>
+<body>
+        <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            Divine Architect of Jewels
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                          
+                            <li class="scroll-to-section"><a href="#apply">About Us</a></li>
+                            <li class="scroll-to-section"><a href="#meetings">Software</a></li>
+                     
+                            <li class="scroll-to-section"><a href="#courses">Our SucessStories</a></li>
+                            <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <style>
+            .footer {
+                background-color: #f1f1f1; /* Optional: background color */
+                text-align: center;
+                padding: 10px 0; /* Reduce vertical padding */
+                font-size: 14px; /* Smaller text size */
+                color: #555; /* Softer text color */
+           /* Optional: space from content above */
+            }
+
+        </style>
+        <script>
+            $('.nav li:first').addClass('active');
+
+            var showSection = function showSection(section, isAnimate) {
+                var direction = section.replace(/#/, ''),
+                    reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+                    reqSectionPos = reqSection.offset().top - 0;
+
+                if (isAnimate) {
+                    $('body, html').animate({
+                        scrollTop: reqSectionPos
+                    }, 800);
+                } else {
+                    $('body, html').scrollTop(reqSectionPos);
+                }
+            };
+
+            var checkSection = function checkSection() {
+                $('.section').each(function () {
+                    var $this = $(this),
+                        topEdge = $this.offset().top - 80,
+                        bottomEdge = topEdge + $this.height(),
+                        wScroll = $(window).scrollTop();
+
+                    if (topEdge < wScroll && bottomEdge > wScroll) {
+                        var currentId = $this.data('section'),
+                            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                        reqLink.closest('li').addClass('active').siblings().removeClass('active');
+                    }
+                });
+            };
+
+            $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+                e.preventDefault();
+                showSection($(this).attr('href'), true);
+            });
+
+            $(window).scroll(function () {
+                checkSection();
+            });
+
+            </script>
+    </header>
+        <div class="containe">
+
+    <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+        <source src="images/newvideo.mp4" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="caption">
+              <h6>Hello Students</h6>
+              <h2 style="font-size:31px">Welcome to Divine  Architect of Jewels</h2>
+                        <p> Learn from industry experts and become a certified jewelry designer with hands-on CAD training, practical workshops, and professional mentorship.</p>
+                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+              </div>
+          </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+
+
+  <section class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-service-item owl-carousel">
+
+            
+            <div class="item">
+              <div class="icon">
+                <img src="images/service-icon-02.png" alt="">
+              </div>
+              <div class="down-content">
+                            <h4>Jewelry Business Startup</h4>
+                            <p>
+                                Duration: 1 month
+
+                            </p>
+                            <p>
+                                Topics: Business setup, Sourcing, Pricing, E-commerce, Marketing
+                            </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="images/service-icon-03.png" alt="">
+              </div>
+              <div class="down-content">
+                            <h4>Jewelry CAD Designing</h4>
+                            <p> Duration: 3 months / 6 months</p>
+                        
+                            <p> Modules: 2D to 3D modeling, Rendering, STL export, Project work</p>
+              
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="images/service-icon-02.png" alt="">
+              </div>
+              <div class="down-content">
+                            <h4>Manual Jewelry Design</h4>
+                            <p>
+                                Duration: 3 months
+                            </p>
+                            <p>Modules: Sketching, Coloring, Gem setting styles, Rendering techniques</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="images/service-icon-03.png" alt="">
+              </div>
+              <div class="down-content">
+                            <h4>
+                                Gemology Basics
+                            </h4>
+                            <p>
+                                Duration: 1 month
+
+                                
+                            </p>
+                            <p>
+                                Learn gemstone types, quality grading, and market trends.
+                            </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="upcoming-meetings" id="meetings">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Software </h2>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="categories">
+            <h4>Why Choose Us?</h4>
+            <ul>
+              <li><a href="#">Flexible  Batches</a></li>
+              <li><a href="#">Flexible Time</a></li>
+              <li><a href="#">Software Fully Covered</a></li>
+              <li><a href="#">Hand on Learning</a></li>
+                        <li><a href="#">Professional Certification</a></li>
+
+                        <li>  <a href="meeting-details.html"><img src="images/YELLOW_TOP_VIEW.jpg" alt="New Lecturer Meeting"></a></li>
+            </ul>
+        
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="meeting-item">
+                <div class="thumb">
+                  
+                  <a href="meeting-details.html"><img src="images/rhino.jpeg" alt="New Lecturer Meeting"></a>
+                </div>
+                <div class="down-content">
+                
+                                <a href="meeting-details.html"><h4>Rhino 3D</h4></a>
+                      
+                                <p>Rhino powers the jewelry industry’s design needs, from the smallest boutique to the world’s largest manufacturers<br> Rhino also serves as a host platform for several industry-leading jewelry design plugins such as CrossGems, Stuller’s MatrixGold®, and CounterSketch® to make designing even faster and more efficient</p>
+                            
+                                
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="meeting-item">
+                <div class="thumb">
+                
+                  <a href="meeting-details.html"><img src="images/Matrix.png" alt="Online Teaching"></a>
+                </div>
+                <div class="down-content">
+              
+                  <a href="meeting-details.html"><h4>Matrix Gold</h4></a>
+                                <p>Matrix Gold is a jewelry-specific CAD software developed by Gemvision, designed for creating 3D jewelry designs. It's known for its powerful tools, including parametric history for easy modifications and a streamlined interface that combines features from Matrix and RhinoGold<br>MatrixGold aims to make the jewelry design process faster and more efficient for both students and seasoned designers. </p>
+                </div>
+              </div>
+            </div>
+     
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="apply-now" id="apply">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="item">
+                <h3>APPLY FOR COURSES</h3>
+                <p>Turn your creativity into  a  career with our 4-month expert led course in jewellery rendering and CAD Design  </p>
+                <div class="main-button-red">
+                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+              </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="accordions is-first-expanded">
+            <article class="accordion">
+                <div class="accordion-head">
+                    <span>About Us</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                                <p>Divine  Architect of Jewels Institute is a premier educational institution dedicated to nurturing creative minds into skilled jewelry professionals. Our expert-led curriculum combines traditional craftsmanship with the latest CAD (Computer-Aided Design) technologies, ensuring students gain comprehensive knowledge and industry-relevant skills.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="accordion">
+                        <div class="accordion-head">
+                            <span>Mission</span>
+                            <span class="icon">
+                                <i class="icon fa fa-chevron-right"></i>
+                            </span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="content">
+                                <p>To empower aspiring designers with innovative tools and practical skills to build sustainable careers in the jewelry industry.</p>
+                                </div>
+
+                                </div>
+            </article>
+            <article class="accordion">
+                <div class="accordion-head">
+                            <span>Vision</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                                <p>To be a globally recognized institute in jewelry education known for excellence, creativity, and professional development.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="accordion last-accordion">
+                <div class="accordion-head">
+                            <span>Why Choose Us</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                                <p>
+                                    Government-affiliated courses
+
+                                    Industry-experienced faculty
+
+                                    100% placement assistance
+
+                                    Live projects & internships
+
+                                    Women-centric entrepreneurship programs
+
+                                    Flexible timings and weekend batches
+                                </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-courses" id="courses">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2 style="text-align: center;">Students Review</h2>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-courses-item owl-carousel">
+            <div class="item">
+                        
+              <img src="images/Ankita.jpg" alt="Course One">
+              <div class="down-content">
+                            <h4>
+                                Ankit Charkhe
+                            </h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-12">
+                        <p>
+                                            " As a student  i  find  cad jwellery design to be an exciting   and innovative field  and this class helps to push my self a better n complete profile about my career"
+                        </p>
+                                         <ul>
+                                           
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                    
+                                        </ul>
+
+                   
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/Sanika.jpg" alt="Course Two">
+                        <div class="down-content">
+                            <h4>
+                                Sanika kudtudkar
+
+                            </h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>
+                                            "Best experience with this classs about theory n practical knowledge about jewellery,   how we create the multiple designs detailing . With all those tools and techniques"
+                                        </p>
+                                        <ul>
+                                       
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            <div class="item">
+              <img src="images/Raghu.jpg" alt="">
+                        <div class="down-content">
+                            <h4>
+                                Raghuvendra katta
+
+                            </h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>
+                                            " Because of this classes I understand the jewellery field how it works n create those designs.They also thaught multiple designs detailing on birdal rings pendants earring etc .
+                                            "
+                                        </p>
+                                        <ul>
+                                           
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
+
+                    <div class="item">
+                        <img src="images/Ruchita.jpg" alt="">
+                        <div class="down-content">
+                            <h4>
+                                Ruchita baikar
+
+                            </h4>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>"I love the class the way they teach and techniques about the work and innovative field  and this class helps to push my self a better n complete profile about my career"</p>
+                                        <ul>
+                                            
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-facts">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>A Few Facts About Our  Classroom</h2>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-12">
+                  <div class="count-area-content percentage">
+                    <div class="count-digit">94</div>
+                    <div class="count-title">Succesed Students</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="count-area-content">
+                    <div class="count-digit">5</div>
+                    <div class="count-title"> Teachers</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-12">
+                  <div class="count-area-content new-students">
+                    <div class="count-digit">1500</div>
+                    <div class="count-title">New Students</div>
+                  </div>
+                </div> 
+                <div class="col-12">
+                  <div class="count-area-content">
+                    <div class="count-digit">32</div>
+                    <div class="count-title">SucessStories</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div class="col-lg-6 align-self-center">
+          <div class="video">
+                    <a href="images/class.mp4" target="_blank"><img src="images/play-icon.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="upcoming-meetings" id="contact" style="padding-top:0px important">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch for course inquiries, admissions, or any questions about our programs.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row equal-height">
+
+            <div class="col-lg-12">
+                <div class="meeting-item info-container" style="text-align:center">
+                    <div class="down-content">
+                        <div class="info-item">
+                            <div class="icon">
+                         
+                            </div>
+                            <h4>Our Address</h4>
+                            <p>Options Primo Pramises Co-operative Society Ltd <br>21st Road Vijay Nagar Flyover Bridge,MIDC,Andheri (East)-400093<br>Maharashtra, India</p>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon">
+                       
+                            </div>
+                            <h4>Phone Number</h4>
+                            <p>+91 9867371062</p>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon">
+                             
+                            </div>
+                            <h4>Email Address</h4>
+                            <p>shetye.p17@gmail.com</p>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon">
+                            </div>
+                            <h4>Working Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                        </div>
+
+                        <div class="social-links">
+                            <h4>Follow Us</h4>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        </div>
+            <div class="footer">
+        <p>
+            Copyright ©2025 Divine Architect of Jewels. All Rights Reserved.
+
+        </p>
+    </div>
+        <script src="js/isotope.min.js"></script>
+    <script src="js/owl-carousel.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/slick-slider.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/site.js" asp-append-version="true"></script>
+</body>
+</html>
