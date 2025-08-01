@@ -23,6 +23,16 @@
     <link rel="stylesheet" href="css/lightbox.css">
 </head>
 <style>
+  .bullet-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.bullet-list li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
     /* 1. Make the parent row a flex container */
     .row.equal-height {
         display: flex;
@@ -131,7 +141,30 @@
         border-radius: 5px;
         box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
-
+    .accordions ul {
+  list-style: disc !important;
+  padding-left: 20px !important;
+}
+.accordions li {
+  display: list-item !important;
+}
+ .custom-bullets {
+    list-style-type: none !important;
+    padding-left: 5px !important;
+    margin-left: 0 !important;
+  }
+  .custom-bullets li {
+    position: relative;
+    padding-left: 25px !important;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .custom-bullets .bullet {
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: inherit;
+  }
     /* Rest of your existing styles */
     .contact-form input,
     .contact-form select,
@@ -310,13 +343,13 @@
                 <img src="images/service-icon-02.png" alt="">
               </div>
               <div class="down-content">
-                            <h4>Jewelry Business Startup</h4>
+                            <h4>Master in Manual Designing</h4>
                             <p>
-                                Duration: 1 month
+                                Duration: 4 month
 
                             </p>
                             <p>
-                                Topics: Business setup, Sourcing, Pricing, E-commerce, Marketing
+                              Skills to create intricate jewelry designs  focusing on sketching, rendering.
                             </p>
               </div>
             </div>
@@ -326,10 +359,10 @@
                 <img src="images/service-icon-03.png" alt="">
               </div>
               <div class="down-content">
-                            <h4>Jewelry CAD Designing</h4>
-                            <p> Duration: 3 months / 6 months</p>
+                            <h4> Master in Jewelry CAD Designing</h4>
+                            <p> Duration: 4 month</p>
                         
-                            <p> Modules: 2D to 3D modeling, Rendering, STL export, Project work</p>
+                            <p> Skills to design and create jewelry using specialized software</p>
               
               </div>
             </div>
@@ -339,11 +372,11 @@
                 <img src="images/service-icon-02.png" alt="">
               </div>
               <div class="down-content">
-                            <h4>Manual Jewelry Design</h4>
+                            <h4>Master in Jewelry Rendering</h4>
                             <p>
-                                Duration: 3 months
+                                Duration: 4 months
                             </p>
-                            <p>Modules: Sketching, Coloring, Gem setting styles, Rendering techniques</p>
+                            <p>Skills in visualizing and presenting jewelry designs, both through manual techniques and digital tools. </p>
               </div>
             </div>
             
@@ -353,15 +386,15 @@
               </div>
               <div class="down-content">
                             <h4>
-                                Gemology Basics
+                                Master in Jewelry Corel Designing
                             </h4>
                             <p>
-                                Duration: 1 month
+                                Duration: 4 month
 
                                 
                             </p>
                             <p>
-                                Learn gemstone types, quality grading, and market trends.
+                               Skill that teaches how to use CorelDRAW software for jewelry design. 
                             </p>
               </div>
             </div>
@@ -451,7 +484,87 @@
   
           </div>
         </div>
-        <div class="col-lg-6">
+<div class="col-lg-6">
+  <div class="accordions is-first-expanded">
+    <!-- About Us Section -->
+    <article class="accordion">
+      <div class="accordion-head">
+        <span>About Us</span>
+        <span class="icon">
+          <i class="icon fa fa-chevron-right"></i>
+        </span>
+      </div>
+      <div class="accordion-body">
+        <div class="content">
+          <ul class="custom-bullets">
+            <li><span class="bullet">•</span> Divine Architect of Jewels Institute is a premier educational institution dedicated to nurturing creative minds into skilled jewelry professionals.</li>
+            <li><span class="bullet">•</span> Our expert-led curriculum combines traditional craftsmanship with the latest CAD (Computer-Aided Design) technologies.</li>
+            <li><span class="bullet">•</span> Students gain comprehensive knowledge and industry-relevant skills.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Mission Section -->
+    <article class="accordion">
+      <div class="accordion-head">
+        <span>Mission</span>
+        <span class="icon">
+          <i class="icon fa fa-chevron-right"></i>
+        </span>
+      </div>
+      <div class="accordion-body">
+        <div class="content">
+          <ul class="custom-bullets">
+            <li><span class="bullet">•</span> To empower aspiring designers with innovative tools and practical skills.</li>
+            <li><span class="bullet">•</span> To help students build sustainable careers in the jewelry industry.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Vision Section -->
+    <article class="accordion">
+      <div class="accordion-head">
+        <span>Vision</span>
+        <span class="icon">
+          <i class="icon fa fa-chevron-right"></i>
+        </span>
+      </div>
+      <div class="accordion-body">
+        <div class="content">
+          <ul class="custom-bullets">
+            <li><span class="bullet">•</span> To be a globally recognized institute in jewelry education.</li>
+            <li><span class="bullet">•</span> Known for excellence, creativity, and professional development.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Why Choose Us Section -->
+    <article class="accordion last-accordion">
+      <div class="accordion-head">
+        <span>Why Choose Us</span>
+        <span class="icon">
+          <i class="icon fa fa-chevron-right"></i>
+        </span>
+      </div>
+      <div class="accordion-body">
+        <div class="content">
+          <ul class="custom-bullets">
+            <li><span class="bullet">•</span> Government-affiliated courses</li>
+            <li><span class="bullet">•</span> Industry-experienced faculty</li>
+            <li><span class="bullet">•</span> 100% placement assistance</li>
+            <li><span class="bullet">•</span> Live projects & internships</li>
+            <li><span class="bullet">•</span> Women-centric entrepreneurship programs</li>
+            <li><span class="bullet">•</span> Flexible timings and weekend batches</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+        <!-- <div class="col-lg-6">
           <div class="accordions is-first-expanded">
             <article class="accordion">
                 <div class="accordion-head">
@@ -462,7 +575,8 @@
                 </div>
                 <div class="accordion-body">
                     <div class="content">
-                                <p>Divine  Architect of Jewels Institute is a premier educational institution dedicated to nurturing creative minds into skilled jewelry professionals. Our expert-led curriculum combines traditional craftsmanship with the latest CAD (Computer-Aided Design) technologies, ensuring students gain comprehensive knowledge and industry-relevant skills.</p>
+                      <li>Divine  Architect of Jewels Institute is a premier educational institution dedicated to nurturing creative minds into skilled jewelry professionals. Our expert-led curriculum combines traditional craftsmanship with the latest CAD (Computer-Aided Design) technologies, ensuring students gain comprehensive knowledge and industry-relevant skills.</li>
+                             
                     </div>
                 </div>
             </article>
@@ -475,7 +589,8 @@
                         </div>
                         <div class="accordion-body">
                             <div class="content">
-                                <p>To empower aspiring designers with innovative tools and practical skills to build sustainable careers in the jewelry industry.</p>
+                              <li>To empower aspiring designers with innovative tools and practical skills to build sustainable careers in the jewelry industry.</li>
+
                                 </div>
 
                                 </div>
@@ -519,7 +634,7 @@
                 </div>
             </article>
         </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -729,7 +844,7 @@
                          
                             </div>
                             <h4>Our Address</h4>
-                            <p>Options Primo Pramises Co-operative Society Ltd <br>21st Road Vijay Nagar Flyover Bridge,MIDC,Andheri (East)-400093<br>Maharashtra, India</p>
+                            <p>Options Primo Premises Co-operative Society Ltd <br>21st Road Vijay Nagar Flyover Bridge,MIDC,Andheri (East)-400093<br>Maharashtra, India</p>
                         </div>
 
                         <div class="info-item">
@@ -737,7 +852,7 @@
                        
                             </div>
                             <h4>Phone Number</h4>
-                            <p>+91 9867371062</p>
+                            <p>+91 96190 67605</p>
                         </div>
 
                         <div class="info-item">
@@ -758,7 +873,7 @@
                         <div class="social-links">
                             <h4>Follow Us</h4>
                             <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/dajewels2025?igsh=YzljYTk1ODg3Zg==" target="_blank"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-youtube"></i></a>
                             <a href="#"><i class="fa fa-linkedin"></i></a>
                         </div>
